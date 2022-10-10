@@ -1,5 +1,6 @@
 ARG BASE_IMAGE_TAG
-FROM python:${BASE_IMAGE_TAG}
+ARG IMAGE_VERSION
+FROM python:${BASE_IMAGE_TAG}-${IMAGE_VERSION}
 
 LABEL repository="andreclaudino/python-builder"
 LABEL version=${BASE_IMAGE_TAG}
